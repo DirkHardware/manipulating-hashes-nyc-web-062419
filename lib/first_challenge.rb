@@ -24,13 +24,7 @@ def first_challenge
 #   contacts
 # end
 
-contacts.map do |person, data|
-  data.map do |attribute, value|
-    if attribute == :favorite_icecream_flavors
-      attribute.delete_if {|flavor| flavor == "strawberry"}
-    end
-  end
-end
+contacts["Freddy Mercury"][:favorite_icecream_flavors].delete_if {|flavor| flavor == "strawberry" }
 #remember to return your newly altered contacts hash!
 contacts
 end
